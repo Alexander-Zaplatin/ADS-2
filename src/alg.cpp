@@ -37,7 +37,6 @@ if (value >= arr[mid]) l = mid;
 else
 r = mid;
 }
-}
 int len = r - 1;
 for (int i = 0; i < len; i++) {
 l = i + 1;
