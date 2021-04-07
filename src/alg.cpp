@@ -48,7 +48,7 @@ if ((value - arr[i]) > arr[mid]) l = mid + 1;
 else
 r = mid;
 }
-while ((value - arr[i]) == arr[l] {
+while ((value - arr[i]) == arr[l]) {
 res2++;
 l++;
 }
