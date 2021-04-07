@@ -38,8 +38,8 @@ else
 r = mid;
 }
 }
-len = r - 1;
-for (i = 0; i < len; i++) {
+int len = r - 1;
+for (int i = 0; i < len; i++) {
 l = i + 1;
 r = len - 1;
 int res2 = 0;
