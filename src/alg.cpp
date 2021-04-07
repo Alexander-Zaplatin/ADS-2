@@ -34,7 +34,7 @@ int l = 0;
 while (l < r - 1) {
 int mid = (l + r) / 2;
 if (arr[mid] <= value) l = mid;
-else 
+else
 r = mid;
 }
 }
