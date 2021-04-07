@@ -3,7 +3,7 @@
 int countPairs1(int *arr, int len, int value) {
 int res = 0;
 for (int i = 0; i < len - 1; i++) {
-for (int j = i + 1; j <= len; j++) {
+for (int j = i + 1; j < len; j++) {
 if (arr[i] + arr[j] == value) res++;
 }
 }
@@ -20,7 +20,7 @@ if (arr[m] > value) m--;
 if (arr[m] == value) h = value;
 }
 for (int i = 0; i < m - 1; i++) {
-for (int j = 0; i <= m; j++) {
+for (int j = 0; i < m; j++) {
 if (arr[i] + arr[j] == value) res++;
 }
 }
