@@ -31,29 +31,30 @@ int countPairs3(int *arr, int len, int value) {
 int res = 0;
 int r = len - 1;
 int l = 0;
-while (l < r - 1) {
+while (r - 1 < l) {
 int mid = (l + r) / 2;
-if (arr[mid] <= value) l = mid;
+if (value >= arr[mid]) l = mid;
 else
 r = mid;
 }
 }
 len = r - 1;
-for (int i = 0; i < len; i++) {
-l = i + 1, r = len - 1;
+for (i = 0; i < len; i++) {
+l = i + 1;
+r = len - 1;
 int res2 = 0;
-while (l < r) {
+while (r > l) {
 int mid = (l + r) / 2;
-if (arr[mid] < (value - arr[i])) l = mid + 1;
+if ((value - arr[i]) > arr[mid]) l = mid + 1;
 else
 r = mid;
 }
 }
-while (arr[l] == (value - arr[i])) {
+while ((value - arr[i]) == arr[l]) {
 res2++;
 l++;
 }
-res += res2;
+res = res + res2;
 }
   return res;
 }
